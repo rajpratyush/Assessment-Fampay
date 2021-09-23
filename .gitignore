@@ -1,0 +1,6 @@
+venv/
+.idea/
+*/__pycache__/
+Fampay/Fampay/__pycache__/
+Fampay/Youtube/__pycache__/
+Fampay/Youtube/migrations/__pycache__/

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YouTube Searches for Cricket</title>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+<!--  This is to remove an error related to favicon.ico-->
+<link rel="shortcut icon" href="">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <table id="example" class="table table-bordered display top" style="width:100%">
+            <caption style="caption-side: top">YouTube Video Searches for Football (Updates every 10 seconds)</caption>
+          <thead>
+             <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Unique ID</th>
+                <th>Thumbnail URL</th>
+                <th> Published At </th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for x in data %}
+          <tr>
+            <td> {{ x.id}} </td>
+            <td> {{x.title}} </td>
+            <td> {{x.description}} </td>
+            <td> {{x.unique_id}} </td>
+            <td> {{x.url}} </td>
+            <td> {{x.published_at}}</td>
+          <tr>
+          {% endfor %}
+        </tbody>
+        <tfoot>
+             <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Unique ID</th>
+                <th>Thumbnail URL</th>
+                <th> Published At </th>
+            </tr>
+          </tfoot>
+        </table>
+        </div>
+    </div>
+  </div>
+  <meta http-equiv="refresh" content="10">
+</body>
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable(
+      {
+    columns:[
+    //"dummy" configuration
+        {"data":"id" }, //col 1
+        { "data" : "video_title"}, //col 2
+        { "data":"description" }, //col 3
+        { "data":"video_id"}, //col 4
+        { "data":"video_url" },
+        {"date": "published_date"} //col 5
+        ]
+    }
+      );
+
+    });
+setTimeout(function(){
+   window.location.reload(1);
+}, 30000);
+</script>
+</html>
