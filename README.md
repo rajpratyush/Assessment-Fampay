@@ -36,7 +36,7 @@ http://127.0.0.1:8000/
 <li> To allow for videos, that are not present in the database, this app when updates every 10 seconds, also updates the publishedAfter argument of the search.list function to a random number. </li>
 
 <li> utils.py contains the utility functions that are used in views.py to make the code more readable and understandable.</li>
-<li> Reconfigurable parameters have been added in the setup.py file. These parameters can be changed to see the changes reflected.<li>
+<li> Reconfigurable parameters have been added in the setup.py file. These parameters can be changed to see the changes reflected.</li>
 </ol>
 
 
