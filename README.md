@@ -28,19 +28,19 @@ Redirect to any of the following URLs to check the data being uploaded in table 
 localhost:8000
 http://127.0.0.1:8000/
 ```
-Remarks:
+**Remarks:**
 
-1. Every 10 seconds, the page is refreshed. 
+<ol>
+<li> Every 10 seconds, the page is refreshed. </li>
 
-2. To allow for videos, that are not present in the database, this app when updates every 10 seconds, also updates the publishedAfter argument of the search.list function to a random number. 
+<li> To allow for videos, that are not present in the database, this app when updates every 10 seconds, also updates the publishedAfter argument of the search.list function to a random number. </li>
 
-3. utils.py contains the utility functions that are used in views.py to make the code more readable and understandable.
+<li> utils.py contains the utility functions that are used in views.py to make the code more readable and understandable.</li>
+<li> Reconfigurable parameters have been added in the setup.py file. These parameters can be changed to see the changes reflected.<li>
+</ol>
 
-4. Reconfigurable parameters have been added in the setup.py file. These parameters can be changed to see the changes reflected.
 
-
-
-**Reference**
+**References**
 
 - YouTube data v3 API: [https://developers.google.com/youtube/v3/getting-started](https://developers.google.com/youtube/v3/getting-started)
 
