@@ -4,7 +4,7 @@ API to fetch the latest videos sorted in reverse chronological order of their pu
 
 
 **Use Case Diagram (UML)**
-![Fam-yt (1)](https://user-images.githubusercontent.com/40488679/132178804-934d5074-b8e8-4e50-9ff3-a25f5b3bf3a3.png)
+![Fam-yt (1)](assets/image1.png)
 
 First, we need to clone this Git repository. Run the command below in whichever directory you wish this project to be. 
 ```sh
